@@ -1,0 +1,41 @@
+package com.kodnest.arrayconcepts;
+import java.util.Scanner;
+public class MergeArray {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter the size of a array");
+     	int a_size =scan.nextInt();
+     	
+		System.out.println("Enter the size of b array");
+    	int b_size =scan.nextInt();
+    	
+    	//store value
+    	int[] a_arr = new int[a_size];
+    	System.out.println("enter value in a array");
+    	for(int i=0;i<a_arr.length;i++) {
+    		a_arr[i]=scan.nextInt();
+    	}
+    	
+    	int[] b_arr = new int[b_size];
+    	System.out.println("enter value in b array");
+    	for(int i=0;i<b_arr.length;i++) {
+    		b_arr[i]=scan.nextInt();
+    	}
+    	
+    	int c_size = a_arr.length+b_arr.length;
+    	int[] c_arr = new int[c_size];
+    	
+    	for(int i=0;i<a_arr.length;i++) {
+    		c_arr[i]=a_arr[i];
+    	}
+    	for(int i=0;i<b_arr.length;i++) {
+    		c_arr[a_arr.length+i]=b_arr[i];
+    	}
+    	
+    	System.out.println("marge array is: ");
+    	for(int i=0;i<c_arr.length;i++) {
+    		System.out.print(c_arr[i]+",");
+    	}
+}
+}
