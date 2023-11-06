@@ -1,0 +1,28 @@
+package com.kodnest.arrayconcepts;
+
+public class BinarySearch {
+	public static void main(String[] args) {
+		int[] a= {10,20,30,40,50,60,70};
+		int li =0;
+		int hi=a.length-1;
+		int mi= (li+hi)/2;
+		int item=90;
+		while(li<=hi) {
+			if(a[mi]==item) {
+				System.out.println("Item found");
+				break;
+			}
+			else if(a[mi]<item) {
+				li=mi+1;
+			}
+			else {
+				hi=mi-1;
+			}
+			mi=(li+hi)/2;
+		}
+		if(li>hi) {
+			System.out.println("Not Found");
+		}
+	}
+
+}
