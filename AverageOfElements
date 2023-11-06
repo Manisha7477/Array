@@ -1,0 +1,38 @@
+package com.kodnest.arrayconcepts;
+
+import java.util.Scanner;
+
+public class AverageOfOneDimArray {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter the size of array");
+		int size = scan.nextInt();
+		int[] a = new int[size];
+		
+		//System.out.println("The size of array is: "+size);
+		
+		System.out.print("Enter the elements into the array");
+		for(int i=0;i<=size-1;i++) {
+			a[i]= scan.nextInt();
+		}
+		/*System.out.println("The array is: ");          
+		for(int i =0;i<=size-1;i++) {
+			System.out.println(a[i]+",");
+		}*/
+		
+		int sum = 0;
+		double average;
+
+	     for(int i=0; i<a.length; i++) {
+	       sum = sum+a[i];
+	        //average = sum/size;
+
+	     }
+	     average = sum/a.length;
+
+	    System.out.print("Average of elements is: "+average); 
+	    
+	}
+
+}
