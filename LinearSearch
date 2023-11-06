@@ -1,0 +1,19 @@
+package com.kodnest.arrayconcepts;
+
+public class LinearSerach {
+	public static void main(String[] args) {
+		int[] a= {10,20,30,40};
+		int item = 80;
+		int temp=0;
+		for(int i=0;i<=a.length-1;i++) {
+			if(a[i]==item) {
+				System.out.println(item+" Item is found");
+				temp=temp+1;
+			}
+		}
+			if(temp==0) {
+				System.out.println(item+" Item not found");
+			}
+	}
+
+}
