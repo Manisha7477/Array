@@ -1,1 +1,44 @@
+package com.kodnest.arrayconcepts;
+import java.util.Scanner;
+public class MergeArray {
+	public static void main(String[] args) {
+//Static method
+    	
+		// first array 
+        int a[] = { 10,20,30,40 }; 
+        // second array 
+        int b[] = { 50,60,70,80}; 
+  
+        //  length of first array 
+        int a1 = a.length; 
+        //  length of second array 
+        int b1 = b.length; 
+  
+        // resultant array size 
+        int c1 = a1 + b1; 
+  
+        // Creating a new array 
+        int[] c = new int[c1]; 
+   
+        // array into resultant array 
+        for (int i = 0; i < a1; i = i + 1) { 
+             // the resultant array 
+            c[i] = a[i]; 
+        } 
+   
+        // array into resultant array 
+        for (int i = 0; i < b1; i = i + 1) { 
+   
+            // resultant array 
+            c[a1 + i] = b[i]; 
+        } 
+  
+        for (int i = 0; i < c1; i = i + 1) { 
+              
+            // print the element 
+            System.out.print(c[i]+","); 
+        } 
+    } 
+		
+	}
 
