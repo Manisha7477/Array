@@ -1,0 +1,60 @@
+package com.kodnest.arrayconcepts;
+import java.util.Scanner;
+public class DeleteElmt {
+	/*public static void main(String[] args)
+	{
+		int[] arr = {10,20,50,40,60,90};
+		
+		int delt_elm =60;
+		
+		for(int i = 0 ; i<arr.length;i++)
+		{
+			if(delt_elm==arr[i]) {
+				for(int j=i;j<arr.length-1;j++) 
+				{
+					arr[j]=arr[j+1];
+				}
+				break;
+			}
+		}
+		for(int i=0;i<arr.length-1;i++) {
+			System.out.println(arr[i]+" ");
+		}
+	}*/
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter size");
+		int size = scan.nextInt();
+		//declare
+		int[] arr = new int[size];
+		//store
+		System.out.println("Store value");
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=scan.nextInt();
+		}
+		System.out.println("Enter delete element");
+		int dlt_num =scan.nextInt();
+		int count=0;
+		for(int i=0;i<arr.length;i++) {
+			if(dlt_num==arr[i]) {
+				for(int j=i;j<arr.length-1;j++) {
+					arr[j]=arr[j+1];
+				}
+				count++;
+				break;
+			}
+		}
+		
+	if(count==0) {
+		System.out.println("Element not found");
+	}else {
+		System.out.println("Deleted elements successfully ");
+	for(int i=0;i<arr.length-1;i++) {
+		System.out.println(arr[i]+" ");
+	}
+		
+	}
+	}
+
+}
