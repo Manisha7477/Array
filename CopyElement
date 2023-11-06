@@ -1,0 +1,67 @@
+package com.kodnest.arrayconcepts;
+import java.util.Scanner;
+public class CopyElmtWithOtherArray {
+	/*public static void copyElements(int array[][],int rows,int columns) {
+		System.out.println("Mani! please enter the elements value into the arary");
+		for(int i=0;i<array.length;i++) {
+			for(int j=0;j<array.length;j++) {
+				int[i][j] array = int[i][j] array2;
+				
+			}
+		}
+		
+	}*/
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Mani! please enter the total rows in array: ");
+		int rows = scan.nextInt();
+		System.out.print("Mani! please enter the total columns in array: ");
+		int columns = scan.nextInt();
+		
+		//declare 2d arary
+		int[][] array = new int[rows][columns];
+		int[][] array2 = new int[rows][columns];
+		//store elements into the 2d array
+		System.out.println("Mani! please enter the elements value into the arary: ");
+		for(int i=0;i<array.length;i++) {
+			for(int j=0;j<array.length;j++) {
+				array[i][j]=scan.nextInt();
+			}
+		}
+		System.out.println("Original Array is: ");
+		for(int i=0;i<array.length;i++) {
+			for(int j=0;j<array.length;j++) {
+				System.out.print(array[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("Mani! please enter the elements value into the 2nd arary");
+		for(int i=0;i<array2.length;i++) {
+			for(int j=0;j<array2.length;j++) {
+				array2[i][j]=scan.nextInt();
+			}
+		}
+		System.out.println("Store in another array is: ");
+		for(int i=0;i<array.length;i++) {
+			for(int j=0;j<array.length;j++) {
+				//store in another arary
+		     //array2[i][j] = array[i][j];
+				System.out.print(array2[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("Copy Elements is: ");
+		for(int i=0;i<array.length;i++) {
+			for(int j=0;j<array.length;j++) {
+				//copy element logic
+				
+				if(array[i][j]==array2[i][j]) 
+				{
+				System.out.print(array2[i][j]+" ");
+			}
+			}
+		}
+	}
+
+}
