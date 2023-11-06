@@ -1,0 +1,48 @@
+package com.kodnest.arrayconcepts;
+import java.util.Scanner;
+public class BSByUser {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = scan.nextInt();
+		
+		//declare array
+		int[] a= new int[size];
+		
+		//store value
+		System.out.println("Enter the value into the array");
+		for(int i=0;i<=a.length-1;i++) {
+			a[i] = scan.nextInt();
+					
+		}
+		System.out.println("Enter the search value");
+		int num = scan.nextInt();
+//		int li=0;
+//		int hi=a.length-1;
+//		int mi =(li+hi)/2;
+		for(int i=0;i<=a.length-1;i++) {
+			int li=0;
+			int hi=a.length-1;
+		    int mi =(li+hi)/2;
+			while(li<=hi) {
+				if(a[mi]==num) {
+					System.out.println(num+" Number is found");
+					break;
+				}
+				else if(a[mi]<num) {
+					li = mi+1;
+				}
+				else {
+					hi = mi-1;
+				}
+				mi=(li+hi)/2;
+			}
+			if(li>hi) {
+				System.out.println(num+" Number is not found");
+				//break;
+			}
+		}
+
+	}
+
+}
