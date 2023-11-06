@@ -1,0 +1,38 @@
+package com.kodnest.arrayconcepts;
+import java.util.Scanner;
+public class ClassSolution4 {
+	public static void main(String[] arg) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Mani! Please enter the total no. of rows");
+		int rows = scan.nextInt();
+		System.out.println("Mani! Please enter the total no. of columns");
+		int columns = scan.nextInt();
+		
+		//declare the 2d array
+		int[][] r = new int[rows][columns];
+		
+		System.out.println("Enter the elements value into the 2d array");
+		for(int i=0;i<rows;i++) {
+			for(int j=0;j<columns;j++) {
+				r[i][j]=scan.nextInt();
+			}
+		}
+		
+		System.out.println("The elements of 2d array is: ");
+		//System.out.println("The sum of total marks of the students");
+		//int sum =0;
+		for(int i=0;i<r.length;i++) {
+			for(int j=0;j<r[i].length;j++) {
+				//sum = sum+m[classes][students];
+				if(j==0) {
+				System.out.print(r[i][j]+" ");
+				}
+			}
+			System.out.println();
+			//System.out.println(sum);
+		}
+		//System.out.println(sum);
+		
+		}
+
+}
